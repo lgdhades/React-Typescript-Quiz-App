@@ -2,6 +2,7 @@ import './Answer.css'
 
 interface PropsType {
   children: string
+  onClick?: () => void
 }
 
 export default function NextQuestionButton({ children, ...restProps }: PropsType) {
