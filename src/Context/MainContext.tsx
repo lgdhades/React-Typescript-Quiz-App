@@ -5,17 +5,22 @@ interface PropsType {
 }
 
 interface ContextInterface {
-  currentQuestion?: number
+  currentQuestion: number
   setCurrentQuestion?: (arg0: number) => void
-  showAnswerResult?: string
+  showAnswerResult: string
   setShowAnswerResult?: (arg0: string) => void
-  correctAnswersNumber?: number
+  correctAnswersNumber: number
   setCorrectAnswersNumber?: (arg0: number) => void
-  wrongAnswersNumber?: number
+  wrongAnswersNumber: number
   setWrongAnswersNumber?: (arg0: number) => void
 }
 
-export const MainContext = createContext<ContextInterface>({})
+export const MainContext = createContext<ContextInterface>({
+  currentQuestion: 1,
+  showAnswerResult: '',
+  correctAnswersNumber: 0,
+  wrongAnswersNumber: 0,
+})
 
 export const MainContextProvider = ({ children }: PropsType) => {
   const [currentQuestion, setCurrentQuestion] = useState(1)
