@@ -4,4 +4,3 @@ export default function App() {
   return <QuizCompound />
 }
 
-//
